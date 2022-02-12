@@ -1,2 +1,2 @@
-# Jogo-da-Forca-
+# Jogo-da-Forca
 Jogo simples de forca em python
