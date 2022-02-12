@@ -1,4 +1,7 @@
-from random import *
+from random import randrange
+from palavras.funcao_palavras import *
+
+
 while True:
     print('#############################################################')
     print('\t\t\tJOGO DA FORCA')
@@ -10,19 +13,13 @@ while True:
     if op == '1':
         def Jogar():
             # listas de palavras
-            lista_palavras_faceis = ['amarelo', 'amiga', 'amor', 'ave', 'avião', 'avó', 'balão', 'bebê', 'bolo', 'branco', 'cama', 'caneca', 'celular', 'clube', 'copo', 'doce', 'elefante', 'escola', 'estojo',
-                                     'faca', 'foto', 'garfo', 'geleia', 'girafa', 'janela', 'limonada', 'mãe', 'meia', 'noite', 'óculos', 'ônibus', 'ovo', 'pai', 'pão', 'parque', 'passarinho', 'peixe', 'pijama', 'rato', 'umbigo']
-            lista_palavras_dificeis = ['acender', 'afilhado', 'ardiloso', 'áspero', 'assombração', 'asterisco', 'basquete', 'caminho', 'champanhe', 'chiclete', 'coelho', 'contexto', 'convivência', 'coração', 'desalmado', 'eloquente', 'esfirra', 'esquerdo', 'exceção', 'fugaz',
-                                       'gororoba', 'heterossexual', 'horrorizado', 'impacto', 'independência', 'modernidade', 'oftalmologista', 'otorrinolaringologista', 'paralelepípedo', 'pororoca', 'prognóstico', 'quarentena', 'quimera', 'refeição', 'reportagem', 'sino', 'taciturno', 'tênue', 'visceral']
-            lista_palavras_aleatorias = ['afobado', 'amendoim', 'banheiro', 'caatinga', 'cachorro', 'campeonato', 'capricórnio', 'catapora', 'corrupção', 'crepúsculo', 'empenhado', 'esparadrapo', 'forca',
-                                         'galáxia', 'história', 'magenta', 'manjericão', 'menta', 'moeda', 'oração', 'paçoca', 'palavra', 'pedreiro', 'pneumonia', 'pulmão', 'rotatória', 'serenata', 'transeunte', 'trilogia', 'xícara']
+            lista_palavras_faceis = pa_faceis()
+            lista_palavras_dificeis = pa_dificeis()
+            lista_palavras_aleatorias = pa_aleatorias()
             # lista dicas das palavras
-            lista_dicas_faceis = ['cor', 'ser humano', 'verbo', 'animal', 'veículo', 'parente', 'objeto', 'ser humano', 'comida', 'cor', 'objeto', 'objeto', 'objeto', 'lugar', 'objeto', 'comida', 'animal', 'lugar', 'objeto',
-                                  'objeto', 'objeto', 'objeto', 'comida', 'animal', 'objeto', 'comida', 'parente', 'objeto', 'lugar', 'objeto', 'veículo', 'comida', 'parente', 'lugar', 'animal', 'animal', 'roupa', 'animal', 'parte do corpo humano']
-            lista_dicas_dificeis = ['ação', 'parente', 'característica', 'característica', 'medo', 'caracter', 'esporte', 'lugar', 'bebida', 'doce', 'animal', 'ação', 'lugar', 'parte do corpo humano', 'característica', 'característica', 'comida', 'direção', 'ação',
-                                    'característica', 'comida', 'ser humano', 'característica', 'ação', 'característica', 'característica', 'profissão', 'profissão', 'objeto', 'natureza', 'característica', 'ação', 'animal', 'ação', 'ação', 'objeto', 'característica', 'característica', 'característica']
-            lista_dicas_aleatorias = ['característica', 'comida', 'casa', 'bioma', 'animal', 'ação', 'animal', 'doença', 'ação', 'natureza', 'característica', 'objeto', 'objeto', 'natureza',
-                                      'matéria', 'cor', 'legume', 'comida', 'objeto', 'ação', 'doce', 'objero', 'profissão', 'doença', 'parte do corpo humano', 'objeto', 'musica', 'característica', 'filme', 'objeto']
+            lista_dicas_faceis = dicas_pa_faceis()
+            lista_dicas_dificeis = dicas_pa_dificeis()
+            lista_dicas_aleatorias = dicas_pa_aleatorias()
 
             numero_aleatorio = randrange(0, 41)
             cont = 0
@@ -32,8 +29,7 @@ while True:
                 'Escolha a dificuldade:\n1.Fácil\n2.Dificil\n3.Aleatorio\n')
             if escolha_dificuldade == '1':
                 quant_letras = len(lista_palavras_faceis[numero_aleatorio])
-                palavra_escolhida = lista_palavras_faceis[numero_aleatorio]
-
+                
                 print(
                     f'\nA palavra contém {quant_letras} letras     Dica: {lista_dicas_faceis[numero_aleatorio]}    Voce tem 3 chances!!')
 
@@ -73,7 +69,7 @@ while True:
                             print('QUE PENA, VOCE PERDEUUUUUU!!!=(')
             elif escolha_dificuldade == '2':
                 quant_letras = len(lista_palavras_dificeis[numero_aleatorio])
-                palavra_escolhida = lista_palavras_dificeis[numero_aleatorio]
+                
 
                 print(
                     f'\nA palavra contém {quant_letras} letras     Dica: {lista_dicas_dificeis[numero_aleatorio]}    Voce tem 3 chances!!')
@@ -114,7 +110,6 @@ while True:
                             print('QUE PENA, VOCE PERDEUUUUUU!!!=(')
             else:
                 quant_letras = len(lista_palavras_aleatorias[numero_aleatorio])
-                palavra_escolhida = lista_palavras_aleatorias[numero_aleatorio]
 
                 print(
                     f'\nA palavra contém {quant_letras} letras     Dica: {lista_dicas_aleatorias[numero_aleatorio]}    Voce tem 3 chances!!')
