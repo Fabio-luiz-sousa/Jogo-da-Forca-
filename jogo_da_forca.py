@@ -1,5 +1,6 @@
 from random import randrange
 from palavras.funcao_palavras import *
+from desenho_forca.desenho_forca import *
 
 
 while True:
@@ -9,7 +10,9 @@ while True:
 
     print('\t\t\t1.Iniciar\n\t\t\t2.Configurações\n\t\t\t3.Sair')
     op = input('Digite o número da opcao escolhida: ')
-
+    if op !='1' or op !='2' or op!='3':
+        print('EROOO!!! Digite uma opção válida')
+        continue
     if op == '1':
         def Jogar():
             # listas de palavras
@@ -25,15 +28,17 @@ while True:
             cont = 0
 
             letras_digitadas = []
+            
             escolha_dificuldade = input(
                 'Escolha a dificuldade:\n1.Fácil\n2.Dificil\n3.Aleatorio\n')
             if escolha_dificuldade == '1':
+                print(forca) #desenho da forca
                 quant_letras = len(lista_palavras_faceis[numero_aleatorio])
                 
                 print(
-                    f'\nA palavra contém {quant_letras} letras     Dica: {lista_dicas_faceis[numero_aleatorio]}    Voce tem 3 chances!!')
+                    f'A palavra contém {quant_letras} letras     Dica: {lista_dicas_faceis[numero_aleatorio]}    Voce tem 7 chances!!')
 
-                chances = 3
+                chances = 7
 
                 while True:
                     if chances <= 0:
@@ -42,12 +47,30 @@ while True:
                     if len(letra) > 1:
                         print('AAAAHH NÃO VALEEEEEEE!! Digite apenas uma letra!')
                         continue
+                    if letra.isnumeric():
+                        print('ERRRO!! Digite apenas letras!!')
+                        continue
                     letras_digitadas.append(letra)
 
                     if letra in lista_palavras_faceis[numero_aleatorio]:
                         print('AEEEEE, essa letra está na palavra')
                     else:
                         print('EROOOUUU')
+                        if chances==7:
+                            print(cabeca)#cabeca forca
+                        elif chances ==6:
+                            print(peito)#peito forca
+                        elif chances ==5:
+                            print(braco_direito)#braco forca
+                        elif chances ==4:
+                            print(braco_esquerdo)#braco forca
+                        elif chances ==3:
+                            print(tronco)#tronco forca
+                        elif chances ==2:
+                            print(perna_direita)#perna forca
+                        elif chances ==1:
+                            print(perna_esquerda)#perna forca
+                        
                         letras_digitadas.pop()
                     palavra_escrita = ''
                     for letra_escolhida in lista_palavras_faceis[numero_aleatorio]:
@@ -74,7 +97,7 @@ while True:
                 print(
                     f'\nA palavra contém {quant_letras} letras     Dica: {lista_dicas_dificeis[numero_aleatorio]}    Voce tem 3 chances!!')
 
-                chances = 3
+                chances = 7
 
                 while True:
                     if chances <= 0:
@@ -89,6 +112,21 @@ while True:
                         print('AEEEEE, essa letra está na palavra')
                     else:
                         print('EROOOUUU')
+                        if chances==7:
+                            print(cabeca)#cabeca forca
+                        elif chances ==6:
+                            print(peito)#peito forca
+                        elif chances ==5:
+                            print(braco_direito)#braco forca
+                        elif chances ==4:
+                            print(braco_esquerdo)#braco forca
+                        elif chances ==3:
+                            print(tronco)#tronco forca
+                        elif chances ==2:
+                            print(perna_direita)#perna forca
+                        elif chances ==1:
+                            print(perna_esquerda)#perna forca
+                       
                         letras_digitadas.pop()
                     palavra_escrita = ''
                     for letra_escolhida in lista_palavras_dificeis[numero_aleatorio]:
@@ -114,7 +152,7 @@ while True:
                 print(
                     f'\nA palavra contém {quant_letras} letras     Dica: {lista_dicas_aleatorias[numero_aleatorio]}    Voce tem 3 chances!!')
 
-                chances = 3
+                chances = 7
 
                 while True:
                     if chances <= 0:
@@ -129,6 +167,21 @@ while True:
                         print('AEEEEE, essa letra está na palavra')
                     else:
                         print('EROOOUUU')
+                        if chances==7:
+                            print(cabeca)#cabeca forca
+                        elif chances ==6:
+                            print(peito)#peito forca
+                        elif chances ==5:
+                            print(braco_direito)#braco forca
+                        elif chances ==4:
+                            print(braco_esquerdo)#braco forca
+                        elif chances ==3:
+                            print(tronco)#tronco forca
+                        elif chances ==2:
+                            print(perna_direita)#perna forca
+                        elif chances ==1:
+                            print(perna_esquerda)#perna forca
+                        
                         letras_digitadas.pop()
                     palavra_escrita = ''
                     for letra_escolhida in lista_palavras_aleatorias[numero_aleatorio]:
