@@ -1,2 +1,2 @@
 <h1 align="center">Jogo da Forca</h1>
-Jogo simples de forca em python
+<p align="center">Jogo simples de forca, desenvolvido para praticar a programação</p>
