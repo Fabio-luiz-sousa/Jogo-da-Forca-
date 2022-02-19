@@ -10,7 +10,7 @@ while True:
 
     print('\t\t\t1.Iniciar\n\t\t\t2.Configurações\n\t\t\t3.Sair')
     op = input('Digite o número da opcao escolhida: ')
-    if op !='1' or op !='2' or op!='3':
+    if op !='1' and op !='2' and op!='3':
         print('EROOO!!! Digite uma opção válida')
         continue
     if op == '1':
@@ -91,11 +91,12 @@ while True:
                         if chances == 0:
                             print('QUE PENA, VOCE PERDEUUUUUU!!!=(')
             elif escolha_dificuldade == '2':
+                print(forca) #desenho da forca
                 quant_letras = len(lista_palavras_dificeis[numero_aleatorio])
                 
 
                 print(
-                    f'\nA palavra contém {quant_letras} letras     Dica: {lista_dicas_dificeis[numero_aleatorio]}    Voce tem 3 chances!!')
+                    f'\nA palavra contém {quant_letras} letras     Dica: {lista_dicas_dificeis[numero_aleatorio]}    Voce tem 7 chances!!')
 
                 chances = 7
 
@@ -147,10 +148,11 @@ while True:
                         if chances == 0:
                             print('QUE PENA, VOCE PERDEUUUUUU!!!=(')
             else:
+                print(forca) #desenho da forca
                 quant_letras = len(lista_palavras_aleatorias[numero_aleatorio])
 
                 print(
-                    f'\nA palavra contém {quant_letras} letras     Dica: {lista_dicas_aleatorias[numero_aleatorio]}    Voce tem 3 chances!!')
+                    f'\nA palavra contém {quant_letras} letras     Dica: {lista_dicas_aleatorias[numero_aleatorio]}    Voce tem 7 chances!!')
 
                 chances = 7
 
