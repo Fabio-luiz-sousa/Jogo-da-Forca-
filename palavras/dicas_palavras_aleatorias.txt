@@ -1,11 +1,14 @@
 característica
 comida
 casa 
+instrumento musical
 bioma
+perte do corpo humano
 animal
 ação
 animal
 doença
+objeto
 ação
 natureza
 característica
@@ -13,6 +16,7 @@ objeto
 objeto
 natureza
 matéria
+objeto
 cor
 legume
 comida
@@ -21,10 +25,16 @@ ação
 doce
 objeto
 profissão
+piercing
 doença
 parte do corpo humano
 objeto
+objeto
+objeto
+instrumento musical
 musica
+característica 
 característica
+instrumento musical
 filme
 objeto
